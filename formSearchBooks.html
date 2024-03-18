@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+      p {
+        text-align : center;
+      }
+      input{
+        width: 300;
+        height: 30;
+        font-size: 120%;
+      }
+      button{
+        font-size: 120%;
+      }
+      body{
+        background-color: #ffffe0;
+      }
+    </style>
+    <title>書籍の名前と著者を検索する</title>
+  </head>
+  <form name="form1" action="/cgi-bin/formSearchBooks.py" method="POST">
+    <body>
+      <h2>
+        <p>書籍検索</p>
+        <p><img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vPoJJzYhbx2TK8OAfFX8l82yHAM0TTEuQQ&usqp=CAU" width = "250" height = "200" /></p>
+      <p>クエリを入力してください</p>
+      </h2>
+      <p><input type="text" name="param1" /></p>
+      <p><button type="submit" name="submit">検索</button></p>
+    </body>
+  </form>
+</html>

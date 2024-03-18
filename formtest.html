@@ -1,0 +1,26 @@
+<html>
+  <script language="javascript">
+    function check() {
+      var param = document.form1.param1.value;
+      if(param == '') {
+        alert("値を入力してください。");
+      return false;
+      } else if(param.match( /[^0-9]+/ )) {
+        alert("数字のみを入力してください。");
+      return false;
+    }
+    return true;
+  }
+  </script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>テスト</title>
+  </head>
+  <form name="form1" action="/cgi-bin/formtest.py" method="POST">
+    文字を入力してください
+    <input type="text" name="param1" />
+    <button type="submit" name="submit" onclick ="return check();">送信</button>
+  </form>
+</html>
+  
+
